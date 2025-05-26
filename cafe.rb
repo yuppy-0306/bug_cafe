@@ -3,17 +3,17 @@
 require 'debug'
 
 DRINKS = [
-  { name: 'コーヒー', price: '300' },
-  { name: 'カフェラテ', price: '400' },
-  { name: 'チャイ', price: '460' },
-  { name: 'エスプレッソ', price: '340' },
-  { name: '緑茶', price: '450' }
+  { name: 'コーヒー', price: 300 },
+  { name: 'カフェラテ', price: 400 },
+  { name: 'チャイ', price: 460 },
+  { name: 'エスプレッソ', price: 340 },
+  { name: '緑茶', price: 450 }
 ].freeze
 
 FOODS = [
-  { name: 'チーズケーキ', price: '470' },
-  { name: 'アップルパイ', price: '520' },
-  { name: 'ホットサンド', price: '410' }
+  { name: 'チーズケーキ', price: 470 },
+  { name: 'アップルパイ', price: 520 },
+  { name: 'ホットサンド', price: 410 }
 ].freeze
 
 def take_order(menus)
@@ -32,5 +32,5 @@ drinks_order = take_order(DRINKS)
 puts 'フードメニューはいかがですか?'
 foods_order = take_order(FOODS)
 
-total = FOODS[foods_order][:price].to_i + DRINKS[drinks_order][:price].to_i
+total = FOODS[foods_order][:price] + DRINKS[drinks_order][:price]
 puts "お会計は#{total}円になります。ありがとうございました！"
